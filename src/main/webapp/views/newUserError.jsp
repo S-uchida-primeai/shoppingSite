@@ -4,10 +4,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>ログインエラー</title>
+<title>Insert title here</title>
 </head>
 <body>
-	<p>IDもしくはパスワードが違います。</p>
-	<a href="login-in.jsp">ログイン画面へ戻る</a>
+	<h1>失敗</h1>
+	<a href="newUser.jsp">新規会員登録画面に戻る</a>
 </body>
 </html>

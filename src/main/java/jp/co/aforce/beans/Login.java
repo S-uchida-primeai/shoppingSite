@@ -9,10 +9,7 @@ public class Login implements Serializable {
 	private String firstName;
 	private String address;
 	private String email;
-	
-	
-	
-	
+
 	public Login(String id, String password, String lastName, String firstName, String address, String email) {
 		this.id = id;
 		this.password = password;
@@ -20,9 +17,7 @@ public class Login implements Serializable {
 		this.firstName = firstName;
 		this.address = address;
 		this.email = email;
-		
-		
-		
+
 	}
 
 	public String getId() {
@@ -32,7 +27,6 @@ public class Login implements Serializable {
 	public void setId(String id) {
 		this.id = id;
 	}
-	
 
 	public String getPassword() {
 		return password;
@@ -73,8 +67,5 @@ public class Login implements Serializable {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	
-	
-
 
 }

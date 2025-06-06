@@ -12,16 +12,16 @@ import jp.co.aforce.beans.Login;
 import jp.co.aforce.dao.LoginDAO;
 
 /**
- * Servlet implementation class NewUserAction
+ * Servlet implementation class UserDeletServlet
  */
-@WebServlet("/views/newuseraction")
-public class NewUserAction extends HttpServlet {
+@WebServlet("/views/UserDeleteServlet")
+public class UserDeleteServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public NewUserAction() {
+	public UserDeleteServlet() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
@@ -42,33 +42,36 @@ public class NewUserAction extends HttpServlet {
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 
-		try {
-			// getParameterでフォームから値を取得
-			String id = request.getParameter("id");
-			String password = request.getParameter("password");
-			String lastName = request.getParameter("lastName");
-			String firstName = request.getParameter("firstName");
-			String address = request.getParameter("address");
-			String email = request.getParameter("email");
+		//コンフォームの情報を取得
+		String confirm = request.getParameter("confirm");
 
-			// ユーザー情報をbeanにまとめる
-			Login user = new Login(id, password, lastName, firstName, address, email);
+		//IDはセッションから取得
+		Login user = (Login) request.getSession().getAttribute("user");
 
-			// DAOを使ってDBに登録
-			LoginDAO dao = new LoginDAO();
-			int result = dao.insertUser(user);
+		String memberId = user.getId();
 
-			if (result == 1) {
-				// 登録成功
-				response.sendRedirect("userSuccess.jsp");
-			} else {
-				// 登録失敗（ID重複など）
-				response.sendRedirect("newUserError.jsp");
+		if ("yes".equals(confirm)) {
+			try {
+				LoginDAO dao = new LoginDAO();
+				int result = dao.deleteUser(memberId);
+
+				if (result == 1) {
+					response.sendRedirect("userDeleteSuccess.jsp");
+				} else {
+					//request.setAttribute("error", "削除に失敗しました");
+					request.getRequestDispatcher("userDelete.jsp").forward(request, response);
+				}
+
+			} catch (Exception e) {
+				e.printStackTrace();
+				//request.setAttribute("error", "エラーが発生しました");
+				request.getRequestDispatcher("userDelete.jsp").forward(request, response);
+
 			}
 
-		} catch (Exception e) {
-			e.printStackTrace();
-			response.sendRedirect("newUserError.jsp");
+		} else if ("no".equals(confirm)) {
+
+			response.sendRedirect("user-menu.jsp");
 		}
 	}
 
