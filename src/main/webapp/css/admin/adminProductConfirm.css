@@ -1,0 +1,86 @@
+@charset "UTF-8";
+
+body {
+	font-family: 'Noto Serif JP', serif;
+	background-color: #f5f5f5;
+	margin: 0;
+	padding: 0;
+	color: #2c2c2c;
+}
+
+.confirm-container {
+	max-width: 600px;
+	margin: 60px auto;
+	background-color: #ffffff;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+	padding: 30px;
+}
+
+.confirm-title {
+	text-align: center;
+	font-size: 22px;
+	margin-bottom: 25px;
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 10px;
+}
+
+.product-info p {
+	margin: 10px 0;
+	font-size: 15px;
+}
+
+.stock-title {
+	margin-top: 30px;
+	font-size: 18px;
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 5px;
+}
+
+.stock-table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 10px;
+}
+
+.stock-table th,
+.stock-table td {
+	border: 1px solid #ccc;
+	padding: 8px;
+	text-align: center;
+	font-size: 14px;
+}
+
+.submit-button {
+	width: 100%;
+	margin-top: 30px;
+	padding: 12px;
+	background-color: #2c2c2c;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 14px;
+}
+
+.submit-button:hover {
+	background-color: #444;
+}
+
+.back-link {
+	display: block;
+	text-align: center;
+	margin-top: 20px;
+	color: #2c2c2c;
+	text-decoration: none;
+	border: 1px solid #2c2c2c;
+	padding: 8px 16px;
+	border-radius: 4px;
+	letter-spacing: 0.5px;
+}
+
+.back-link:hover {
+	background-color: #2c2c2c;
+	color: #fff;
+}

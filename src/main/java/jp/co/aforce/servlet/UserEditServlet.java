@@ -72,7 +72,7 @@ public class UserEditServlet extends HttpServlet {
 				session.setAttribute("user", user);
 
 				// 編集完了ページかメニュー画面へリダイレクト
-				response.sendRedirect(request.getContextPath() + "/views/user-menu.jsp");
+				response.sendRedirect(request.getContextPath() + "/views/userEditSuccess.jsp");
 			} else {
 				// 更新失敗時（何かエラーあれば編集画面に戻すなど）
 				request.getRequestDispatcher("userEdit.jsp").forward(request, response);

@@ -9,15 +9,21 @@ public class Login implements Serializable {
 	private String firstName;
 	private String address;
 	private String email;
+	private int admin;
 
-	public Login(String id, String password, String lastName, String firstName, String address, String email) {
+	public Login(String id, String password, String lastName, String firstName, String address, String email, int admin) {
 		this.id = id;
 		this.password = password;
 		this.lastName = lastName;
 		this.firstName = firstName;
 		this.address = address;
 		this.email = email;
+		this.admin = admin;
 
+	}
+	
+	public Login(String id, String password, String lastName, String firstName, String address, String email) {
+		this(id, password, lastName, firstName, address, email, 0); 
 	}
 
 	public String getId() {
@@ -67,5 +73,15 @@ public class Login implements Serializable {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+
+	public int getAdmin() {
+		return admin;
+	}
+
+	public void setAdmin(int admin) {
+		this.admin = admin;
+	}
+	
+	
 
 }

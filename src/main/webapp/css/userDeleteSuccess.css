@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+body {
+  font-family: 'Noto Serif JP', serif;
+  background-color: #f9f6f1;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.success-container {
+  width: 420px;
+  margin: 100px auto;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.success-container h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #28a745; /* 成功の緑色 */
+}
+
+.success-container p {
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.success-container a {
+  display: inline-block;
+  padding: 10px 24px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.success-container a:hover {
+  background-color: #555;
+}

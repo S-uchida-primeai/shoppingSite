@@ -9,7 +9,7 @@ public class DAO {
 	
 	static DataSource ds;
 
-	public Connection getConnection() throws Exception {
+	public static Connection getConnection() throws Exception {
 		if (ds==null) {
 			InitialContext ic=new InitialContext();
 			ds=(DataSource)ic.lookup("java:/comp/env/jdbc/shoppingsite");
