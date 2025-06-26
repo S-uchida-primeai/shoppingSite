@@ -52,7 +52,8 @@ public class LoginDAO extends DAO {
 			String firstName = rs.getString("FIRST_NAME");
 			String address = rs.getString("ADDRESS");
 			String email = rs.getString("MAIL_ADDRESS");
-			Login customer = new Login(id, password, lastName, firstName, address, email);
+			int admin = rs.getInt("admin");
+			Login customer = new Login(id, password, lastName, firstName, address, email, admin);
 			users.add(customer);
 		}
 
@@ -61,50 +62,6 @@ public class LoginDAO extends DAO {
 		return users;
 	}
 
-	/**
-	 * 
-	 * @param id
-	 * @param password
-	 * @return
-	 * @throws Exception
-	 */
-
-//	public Login loginCheck(String id, String password) throws Exception {
-//		Connection con = null;
-//		PreparedStatement st = null;
-//		ResultSet rs = null;
-//		Login user = null;
-//
-//		try {
-//			con = getConnection();
-//			String sql = "SELECT * FROM users WHERE MEMBER_ID = ? AND PASSWORD = ?";
-//			st = con.prepareStatement(sql);
-//			st.setString(1, id);
-//			st.setString(2, password);
-//
-//			rs = st.executeQuery();
-//
-//			if (rs.next()) {
-//				String memberId = rs.getString("MEMBER_ID");
-//				String dbPassword = rs.getString("PASSWORD");
-//				String lastName = rs.getString("LAST_NAME");
-//				String firstName = rs.getString("FIRST_NAME");
-//				String address = rs.getString("ADDRESS");
-//				String email = rs.getString("MAIL_ADDRESS");
-//
-//				user = new Login(memberId, dbPassword, lastName, firstName, address, email);
-//			}
-//		} finally {
-//			if (rs != null)
-//				rs.close();
-//			if (st != null)
-//				st.close();
-//			if (con != null)
-//				con.close();
-//		}
-//
-//		return user;
-//	}
 	
 	//会員情報を更新するメソッド
 	public int updateUser(String memberId, String newLastName, String newFirstName, String newEmail) throws Exception {

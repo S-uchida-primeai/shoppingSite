@@ -4,10 +4,13 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>登録失敗</title>
+<link rel="stylesheet" href="../css/userLogin.css">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap" rel="stylesheet">
 </head>
 <body>
-	<h1>失敗</h1>
-	<a href="newUser.jsp">新規会員登録画面に戻る</a>
+	<div class="error-container">
+    <p class="error-message">IDまたはメールアドレスが既に登録されています。</p>
+    <a href="newUser.jsp" class="back-link">新規会員登録画面に戻る</a>
 </body>
 </html>

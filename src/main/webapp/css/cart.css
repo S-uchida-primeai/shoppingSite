@@ -1,0 +1,115 @@
+@charset "UTF-8";
+
+body {
+  font-family: 'Noto Serif JP', serif;
+  background: linear-gradient(to right, #f9f6f1, #f3efea);
+  margin: 0;
+  padding: 20px;
+  color: #2c2c2c;
+}
+
+h1 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 40px;
+  letter-spacing: 2px;
+  color: #1a1a1a;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+li {
+  background-color: #ffffff;
+  padding: 24px;
+  margin-bottom: 24px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  line-height: 1.8;
+  position: relative;
+}
+
+form {
+  display: inline;
+}
+
+button {
+  background-color: #2c2c2c;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #000;
+  transform: translateY(-2px);
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin-top: 20px;
+}
+
+p {
+  text-align: center;
+  font-size: 16px;
+}
+
+.total {
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 40px;
+  text-align: center;
+  color: #111;
+}
+
+.confirm-form {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.confirm-form button {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s ease;
+}
+
+.confirm-form button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+a {
+  display: block;
+  text-align: center;
+  color: #2c2c2c;
+  text-decoration: none;
+  margin-top: 40px;
+  padding: 12px 24px;
+  border: 1px solid #2c2c2c;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  background-color: #2c2c2c;
+  color: #fff;
+}
